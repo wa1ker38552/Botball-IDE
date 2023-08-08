@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KISS IDE</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+    <script src="/static/projectLoader.js"></script>
+    <script>
+        window.onload = function() {loadProjectFiles()}
+    </script>
+</head>
+<body>
+    <div class="file-selection">
+        <div class="section-title">File Explorer</div>
+        <div class="file-wrapper"></div>
+    </div>
+    <div class="code-wrapper">
+        <div class="code-panel"></div>
+        <div class="file-panel">
+            <div class="section-title">Source Files</div>
+            <div class="file-wrapper" id="sourceFileWrapper"></div>
+            <div class="section-title">Include Files</div>
+            <div class="file-wrapper" id="includeFileWrapper"></div>
+        </div>
+    </div>
+</body>
+</html>

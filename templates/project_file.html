@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KISS IDE</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+    <script src="/static/projectLoader.js"></script>
+    <script src="/static/projectFileLoader.js"></script>
+</head>
+<body>
+    <div class="file-selection">
+        <div class="section-title">File Explorer</div>
+        <div class="file-wrapper"></div>
+    </div>
+    <div class="code-wrapper">
+        <div class="code-panel">
+            <div class="code-header centered-children-vertically">
+                <button onclick="toggleProgram()" id="toggleButton">Run</button>
+                <button onclick="compileProgram()" id="compileButton">Compile</button>
+                <button onclick="saveProgram()" id="saveButton">Save</button>
+            </div>
+            <div class="code-area">
+                <textarea id="codeArea" spellcheck="false"></textarea>
+                <div class="terminal">
+                    <div class="terminal-status" id="terminalStatus">Not compiled</div>
+                    <div class="terminal-output" id="terminalOutput"></div>
+                </div>
+            </div>
+        </div>
+        <div class="file-panel">
+            <div class="section-title">Source Files</div>
+            <div class="file-wrapper" id="sourceFileWrapper"></div>
+            <div class="section-title">Include Files</div>
+            <div class="file-wrapper" id="includeFileWrapper"></div>
+        </div>
+    </div>
+</body>
+</html>

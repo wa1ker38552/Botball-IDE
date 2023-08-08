@@ -1,0 +1,157 @@
+:root {
+    --primary: #636363;
+    --border: #C6C6C6;
+    --secondary: #EAEAEA;
+    --success: #7CFF85;
+    --failure: #FF9B87;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    font-size: 0.9em;
+    font-family: "Consolas";
+    color: var(--primary);
+}
+
+button {
+    font-family: "Consolas";
+    border-radius: 4px;
+    border-style: none;
+    background: var(--secondary);
+    font-size: 1em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    margin-right: 0.5em;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+button:hover {
+    filter: brightness(0.9);
+}
+
+::selection {
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+.centered-children-vertically {
+    display: flex;
+    align-items: center;
+}
+
+.section-title {
+    padding: 0.5em;
+    font-size: 1.2em;
+}
+
+.file-selection {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border-right: solid var(--border) 1px;
+}
+
+.code-wrapper {
+    background: #FFFFFF;
+}
+
+.project {
+    padding: 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--secondary);
+    display: block;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.project:hover {
+    filter: brightness(0.9);
+}
+
+.selectedProject {
+    filter: brightness(0.95);
+}
+
+.code-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.file-panel, .file-selection {
+    width: 12em;
+    background: var(--secondary);
+}
+
+.file-panel {
+    border-left: solid var(--border) 1px;
+}
+
+.code-panel {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.code-header {
+    padding: 0.5em;
+}
+
+.code-area{
+    padding: 0 0.5em 0.5em 0.5em;
+    display: grid;
+    grid-template-rows: 1fr 0.2fr;
+    grid-gap: 0.5em;
+}
+
+#codeArea {
+    outline: 0;
+    resize: none;
+    padding: 0.5em;
+}
+
+.terminal, #codeArea {
+    font-family: "Consolas";
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: var(--border);
+    color: var(--primary);
+    box-sizing: border-box;
+    font-size: 0.9em;
+    border-width: 1px;
+}
+.terminal {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.terminal-status {
+    font-size: 1.2em;
+    background: var(--secondary);
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    border-bottom: solid var(--border) 1px;
+}
+
+.terminal-output {
+    padding: 0.5em;
+    overflow-y: auto;
+    word-wrap: break-word;
+}
+
+.in-progress {
+    cursor: not-allowed;
+    filter: brightness(0.8);
+}
+
+.success-save {
+    background: var(--success);
+}
+
+
+.failure-save {
+    background: var(--failure);
+}
