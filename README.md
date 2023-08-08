@@ -9,7 +9,7 @@ Terminal does not work, it can't display anything you print becuase I have no id
 
 Roadmap:
 - Creating projects/files
-- Syntax highlighting for code editor (in-progress)
+- ~~Syntax highlighting for code editor (in-progress)~~ ✓
 - Working terminal
 - Code completion
 - Cache data from API calls
