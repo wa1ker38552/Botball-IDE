@@ -3,6 +3,13 @@
 <head>
     <title>KISS IDE</title>
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/highlighting.css">
+    <script src="/static/highlighting.js"></script>
+
+    <script src="/static/highlights/highlight.js"></script>
+    <script src="/static/highlights/c.js"></script>
+    <link rel="stylesheet" href="/static/highlights/theme.css">
+
     <script src="/static/script.js"></script>
     <script src="/static/projectLoader.js"></script>
     <script src="/static/projectFileLoader.js"></script>
@@ -20,7 +27,13 @@
                 <button onclick="saveProgram()" id="saveButton">Save</button>
             </div>
             <div class="code-area">
-                <textarea id="codeArea" spellcheck="false"></textarea>
+                <div class="code-editor">
+                    <div id="lineCounterContainer"><div>1</div></div>
+                    <div style="position: relative; overflow: hidden">
+                        <textarea id="codeArea" oninput="highlight()" spellcheck="false"></textarea>
+                        <pre><code class="language-c" id="highlightArea"></code></pre>
+                    </div>
+                </div>
                 <div class="terminal">
                     <div class="terminal-status" id="terminalStatus">Not compiled</div>
                     <div class="terminal-output" id="terminalOutput"></div>
