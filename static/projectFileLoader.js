@@ -2,6 +2,7 @@ async function getFileContent(type, projectName, projectFile) {
     const a = await fetch(`/api/projects/${projectName}/${projectFile}/content?type=${type}`)
     const b = await a.json()
     document.getElementById("codeArea").value = b.content
+    highlight()
 }
 
 async function compileFromFunction(projectName) {
@@ -92,6 +93,7 @@ function saveProgram() {
 
 var type = "src"
 window.onload = async function() {
+    setupHighlighting()
     const projectName = window.location.href.split("/")[4]
     const projectFile = window.location.href.split("/")[5]
 
