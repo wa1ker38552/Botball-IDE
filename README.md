@@ -18,6 +18,8 @@ Roadmap:
 1. The only things you need to install are `flask` and `requests` (flask may already be downloaded)
 2. Connect your wifi to the wombat's connection, without connecting it won't work
 3. Run `main.py` and click the link where it shows the application is being hosted
-4. The IDE should be running at that link. 
+4. The IDE should be running at that link.
+
+Uses a locally hosted version of Highlight.js to format the IDE, [highlight.js](https://highlightjs.org/)
 
 ![image](https://github.com/wa1ker38552/Botball-IDE/assets/100868154/97f70fd0-e948-47f1-bdda-e0a00d7d4b53)
